@@ -17,8 +17,8 @@ process.stdin.on('readable', function() {
                 process.stdout.write('hello!\n');
                 break;
             case '/getOSinfo':
-                var OSinfo = require('./modules/OSinfo');
-                var timeFormat = require('./modules/timeFormat')
+                var OSinfo = require('modules/OSinfo.js');
+                var timeFormat = require('modules/timeFormat.js')
                 OSinfo.print();
                 timeFormat.print();
                 break;
