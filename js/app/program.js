@@ -1,4 +1,5 @@
 var os = require('os');
+    
 // SET ENCODING UTF-8
 process.stdin.setEncoding('utf-8');
 
@@ -16,8 +17,10 @@ process.stdin.on('readable', function() {
                 process.stdout.write('hello!\n');
                 break;
             case '/getOSinfo':
-                var OSinfo = require('../modules/OSinfo');
+                var OSinfo = require('./js//modules/OSinfo');
+                var timeFormat = require('./js/modules/timeFormat')
                 OSinfo.print();
+                timeFormat.print();
                 break;
             default:
                 process.stderr.write('Wrong instruction!\n');
