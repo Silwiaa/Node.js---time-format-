@@ -26,5 +26,4 @@ process.stdin.on('readable', function() {
                 process.stderr.write('Wrong instruction!\n');
         };
     }
-    console.log(process.versions); 
 });
