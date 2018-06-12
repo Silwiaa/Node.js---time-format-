@@ -1,4 +1,6 @@
-var os = require('os');
+var os = require('os'),
+    OSinfo = require('modules/OSinfo.js'),
+    timeFormat = require('modules/timeFormat.js')
     
 // SET ENCODING UTF-8
 process.stdin.setEncoding('utf-8');
@@ -17,8 +19,6 @@ process.stdin.on('readable', function() {
                 process.stdout.write('hello!\n');
                 break;
             case '/getOSinfo':
-                var OSinfo = require('modules/OSinfo.js');
-                var timeFormat = require('modules/timeFormat.js')
                 OSinfo.print();
                 timeFormat.print();
                 break;
