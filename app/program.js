@@ -1,6 +1,5 @@
 var os = require('os'),
     OSinfo = require('modules/OSinfo.js'),
-    timeFormat = require('modules/timeFormat.js')
     
 // SET ENCODING UTF-8
 process.stdin.setEncoding('utf-8');
