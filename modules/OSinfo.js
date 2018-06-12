@@ -1,6 +1,6 @@
 var os = require('os'),
     colors = require('colors'),
-    timeFormat = require('modules/timeFormat.js');
+    timeFormat = require('./timeFormat.js');
 
 function getOSinfo() {
     var type = os.type();
