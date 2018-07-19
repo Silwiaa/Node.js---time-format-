@@ -1,12 +1,13 @@
-var os = require('os'),
-    upTime = os.uptime();
-
-function timeFormat(upTime) {
-    var upTimeHour = Math.floor(upTime / 3600),
-        upTimeMin = Math.floor(upTime / 60),
-        upTimeSek = (upTime % 60).toFixed(0);
+var os = require('os');
     
-    console.log(upTimeHour + 'h' + upTimeMin + 'min' + upTimeSek + 's');
+function timeFormat() {
+    var upTime = os.uptime(),
+        round = Math.round(upTime),
+        upTimeHour = Math.floor(round/3600),
+        upTimeMin = Math.floor(round/60 - upTimehour*60),
+        upTimeSek = round - (upTimeMin*60) - (upTimehour*3600);
+    
+    console.log('Uptime: ').red + upTimeHour + ' h ' + upTimeMin + ' min and ' + upTimeSek + ' s ';
 }
 
 exports.print = timeFormat;
