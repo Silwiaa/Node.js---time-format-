@@ -19,11 +19,8 @@ process.stdin.on('readable', function() {
                 process.stdout.write('hello!\n');
                 break;
             case '/getOSinfo':
-                OSinfo.print();
                 timeFormat.print();
                 break;
-            default:
-                process.stderr.write('Wrong instruction!\n');
         };
     }
 });
