@@ -1,5 +1,5 @@
 var os = require('os'),
-    colors = require('colors')
+    colors = require('colors'),
     timeFormat = require('./timeFormat');
 
 function getOSinfo() {
