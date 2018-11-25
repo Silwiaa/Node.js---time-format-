@@ -1,13 +1,12 @@
 var os = require('os'),
-    colors = require('colors'),
     timeFormat = require('./timeFormat');
 
 function getOSinfo() {
     var type = os.type();
     
-    if(type === 'Darwin') {
+    if (type === 'Darwin') {
         type = 'OSX';
-    } else if(type === 'Windows_NT') {
+    } else if (type === 'Windows_NT') {
         type = 'Windows';
     }
     
@@ -16,13 +15,12 @@ function getOSinfo() {
         uptime = os.uptime(),
         userInfo = os.userInfo();
     
-    console.log('System:'.gray, type);
-    console.log('Release:'.red, release);
-    console.log('CPU model:'.blue, cpu);
-    console.log('Uptime: ~'.green, timeFormat.print(uptime));
-    console.log('User name:'.cyan, userInfo.username);
-    console.log('Home dir:'.grey, userInfo.homedir);
+    console.log('System: ', type);
+    console.log('Release: ', release);
+    console.log('CPU model: ', cpu);
+    console.log('Uptime: ~ ', timeFormat.print(uptime));
+    console.log('User name: ', userInfo.username);
+    console.log('Home dir: ', userInfo.homedir);
 }
 
-//EXPORT getOSinfo
 exports.print = getOSinfo;
