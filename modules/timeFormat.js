@@ -1,10 +1,12 @@
-function timeFormat(upTime) {
-    var round = Math.round(upTime),
-        upTimeHour = Math.floor(round/3600),
-        upTimeMin = Math.floor(round/60 - upTimeHour*60),
-        upTimeSek = round - (upTimeMin*60) - (upTimeHour*3600);
+function timeFormat(time) {
+    var round = Math.round(time),
+        hour = Math.floor(round / 3600),
+        minute = Math.floor(round / 60 - hour * 60),
+        second = round - (hour * 3600) - (minute * 60);
     
-    console.log('Uptime: '.red + upTimeHour + ' h ' + upTimeMin + ' min and ' + upTimeSek + ' s ');
-}
+   console.log('Uptime: ' + hour + 'h ' + minute + 'min ' + second + 'sek');
+};
 
 exports.print = timeFormat;
+
+
