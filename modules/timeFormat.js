@@ -9,4 +9,3 @@ function timeFormat(time) {
 
 exports.print = timeFormat;
 
-
